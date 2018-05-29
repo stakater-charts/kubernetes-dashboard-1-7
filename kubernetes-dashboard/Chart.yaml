@@ -1,5 +1,5 @@
-name: kubernetes-dashboard-1.7
-version: 1.0.1
+name: kubernetes-dashboard
+version: 1.0.2
 description: General-purpose web UI for Kubernetes clusters
 keywords:
 - kubernetes
