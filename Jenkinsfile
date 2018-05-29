@@ -4,5 +4,5 @@
 def dummy = ""
 
 prepareAndUploadCharts {
-    charts = [ "kubernetes-dashboard" ]
+    charts = [ "kubernetes-dashboard-1-7" ]
 }
