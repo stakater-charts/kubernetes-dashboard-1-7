@@ -28,6 +28,10 @@ metadata:
     k8s-app: kubernetes-dashboard
   name: {{ template "kubernetes-dashboard.name" . }}
   namespace: {{ .Release.Namespace }}
+{{- if .Values.deployment.annotations }}
+  annotations:
+{{ toYaml .Values.deployment.annotations | indent 4 }}
+{{- end }}
 spec:
   replicas: 2
   revisionHistoryLimit: 10
@@ -89,6 +93,10 @@ metadata:
     k8s-app: kubernetes-dashboard
   name: {{ template "kubernetes-dashboard.name" . }}
   namespace: {{ .Release.Namespace }}
+{{- if .Values.kubernetes-dashboard.service.annotations }}
+  annotations:
+{{ toYaml .Values.kubernetes-dashboard.service.annotations | indent 4 }}
+{{- end }}
 spec:
   ports:
   - port: 80
