@@ -93,9 +93,9 @@ metadata:
     k8s-app: kubernetes-dashboard
   name: {{ template "kubernetes-dashboard.name" . }}
   namespace: {{ .Release.Namespace }}
-{{- if .Values.kubernetes-dashboard.service.annotations }}
+{{- if .Values.service.annotations }}
   annotations:
-{{ toYaml .Values.kubernetes-dashboard.service.annotations | indent 4 }}
+{{ toYaml .Values.service.annotations | indent 4 }}
 {{- end }}
 spec:
   ports:
