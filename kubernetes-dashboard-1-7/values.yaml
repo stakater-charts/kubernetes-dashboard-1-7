@@ -8,7 +8,7 @@ deployment:
     authproxy.stakater.com/enabled: "false"
     authproxy.stakater.com/upstream-url: "http://127.0.0.1:9090"
     authproxy.stakater.com/source-service-name: 'kubernetes-dashboard-1-7'
-    authproxy.stakater.com/redirection-url: 'https://kubernetes-dashboard-1-7.stackator.com'
+    authproxy.stakater.com/redirection-url: 'https://dashboard.stackator.com'
     authproxy.stakater.com/listen: "0.0.0.0:80"
 service:
   annotations:
@@ -18,4 +18,4 @@ service:
     config.xposer.stakater.com/Domain: stackator.com
     config.xposer.stakater.com/TLS: "true"
     config.xposer.stakater.com/IngressNameTemplate: '{{.Service}}-{{.Namespace}}'
-    config.xposer.stakater.com/IngressURLTemplate: '{{.Service}}.{{.Domain}}'
+    config.xposer.stakater.com/IngressURLTemplate: 'dashboard.{{.Domain}}'
