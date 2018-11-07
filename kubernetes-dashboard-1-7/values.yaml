@@ -5,10 +5,10 @@ deployment:
   annotations:
     authproxy.stakater.com/image-name: quay.io/gambol99/keycloak-proxy
     authproxy.stakater.com/image-tag: v2.1.1
-    authproxy.stakater.com/enabled: "true"
+    authproxy.stakater.com/enabled: "false"
     authproxy.stakater.com/upstream-url: "http://127.0.0.1:9090"
-    authproxy.stakater.com/source-service-name: '{{.Service}}'
-    authproxy.stakater.com/redirection-url: 'https://{{.Service}}.{{.Domain}}'
+    authproxy.stakater.com/source-service-name: 'kubernetes-dashboard-1-7'
+    authproxy.stakater.com/redirection-url: 'https://kubernetes-dashboard-1-7.stackator.com'
     authproxy.stakater.com/listen: "0.0.0.0:80"
 service:
   annotations:
