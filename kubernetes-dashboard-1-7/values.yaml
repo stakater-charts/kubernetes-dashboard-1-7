@@ -1,6 +1,8 @@
 image:
   repository: gcr.io/google_containers/kubernetes-dashboard-amd64
   tag: v1.7.1
+clusterRoleBinding:
+  name: kubernetes-dashboard
 deployment:
   annotations:
 #    authproxy.stakater.com/image-name: quay.io/gambol99/keycloak-proxy
